@@ -78,7 +78,7 @@ $ node newQR
 
 Now your web browser should open and display something like this:
 
-(https://github.com/Duke67/xrptoolkit-nodejs/blob/master/newQR_pix.jpg)
+[[https://github.com/Duke67/xrptoolkit-nodejs/blob/master/newQRimg.jpg]]
 
 
 # Installation (Offline computer)
