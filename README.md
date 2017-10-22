@@ -36,9 +36,9 @@ If used properly, these tools allow you to actively use your XRP assets, while k
 
 # Getting started
 
-    • Ripple Developer Center https://ripple.com/build/
-    • Ripple API Beginners Guide https://ripple.com/build/rippleapi-beginners-guide/
-    • Reliable Transaction Submission https://ripple.com/build/reliable-transaction-submission/
+    • Ripple Developer Center [https://ripple.com/build/] (https://ripple.com/build/)
+    • Ripple API Beginners Guide [https://ripple.com/build/rippleapi-beginners-guide/] (https://ripple.com/build/rippleapi-beginners-guide/)
+    • Reliable Transaction Submission [https://ripple.com/build/reliable-transaction-submission/] (https://ripple.com/build/reliable-transaction-submission/)
     
 # Installation (Online computer)
 
@@ -50,22 +50,26 @@ Fork and clone the xrptoolkit-nodejs repository and run npm install.
 
 Install ripple-lib and other dependencies using npm:
 
+```
 $ npm install ripple-lib
 $ npm install express
 $ npm install qrcode
 $ npm install open
-
+```
 Test your installation:
 
+```
 $ node new
+```
 
 You should see something like this:
 
+```
 user@host:~/xrptoolkit-nodejs$ node new
 Ripple Account : ryH1ckEKUm4yeLTziToAltWYtsrYSV4Po
 Ripple Secret : ss467Gz1g5YikcCxHePFShkoZBPzr
 user@host:~/xrptoolkit-nodejs$ 
-
+```
 
 Now test the QR version of the script to check if internal web server and QR code generation works:
 
