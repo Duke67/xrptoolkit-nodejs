@@ -6,24 +6,24 @@ If used properly, these tools allow you to actively use your XRP assets, while k
 
 
 # Features
-    • Follows and levereges Ripple’s Reliable Transaction Submission
-    • Allows you to keep sensitive info (Ripple Secret) always offline and thus secure
-    • Maintains the air-gap between online and offline devices
-    • Connected device can only see encrypted data
-    • QR codes and OCR makes data transfers quick and convenient
-    • Avoids using USB devices
-    • Clean and compact code allows inspection by end-user, 3rd party or community
+-Follows and levereges Ripple’s Reliable Transaction Submission
+-Allows you to keep sensitive info (Ripple Secret) always offline and thus secure
+-Maintains the air-gap between online and offline devices
+-Connected device can only see encrypted data
+-QR codes and OCR makes data transfers quick and convenient
+-Avoids using USB devices
+-Clean and compact code allows inspection by end-user, 3rd party or community
 
 
 # Functionality
-    • Access to XRP ledger from:
-        ◦ Node.js (Linux, MacOS, Windows)
-        ◦ Android client (xrptoolkit-android)
-        ◦ iOS client (xrptoolkit-ios - planned)
-    • Monitor XRP ledger (ledger, accounts, balances, etc.)
-    • Securely create new accounts (offline)
-    • Securely sign payments (offline)
-    • Submit offline-signed transactions to XRP ledger
+-Access to XRP ledger from:
+  -Node.js (Linux, MacOS, Windows)
+  -Android client (xrptoolkit-android)
+  -iOS client (xrptoolkit-ios - planned)
+-Monitor XRP ledger (ledger, accounts, balances, etc.)
+-Securely create new accounts (offline)
+-Securely sign payments (offline)
+-Submit offline-signed transactions to XRP ledger
 
 
 # Roadmap
