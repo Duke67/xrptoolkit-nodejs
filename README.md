@@ -27,16 +27,16 @@ If used properly, these tools allow you to actively use your XRP assets, while k
 
 
 # Roadmap
-    • Support for other crypto currencies, fiat and IOUs
-    • Escrow
-    • Multi-sign
-    • iOS client for Apple iPhone
+- Support for other crypto currencies, fiat and IOUs
+- Escrow
+- Multi-sign
+- iOS client for Apple iPhone
 
 
 # Getting started
-- Ripple Developer Center [https://ripple.com/build/] (https://ripple.com/build/)
-- Ripple API Beginners Guide [https://ripple.com/build/rippleapi-beginners-guide/] (https://ripple.com/build/rippleapi-beginners-guide/)
-- Reliable Transaction Submission [https://ripple.com/build/reliable-transaction-submission/] (https://ripple.com/build/reliable-transaction-submission/)
+- [Ripple Developer Center] (https://ripple.com/build/)
+- [Ripple API Beginners Guide] (https://ripple.com/build/rippleapi-beginners-guide/)
+- [Reliable Transaction Submission] (https://ripple.com/build/reliable-transaction-submission/)
 
 
 # Installation (Online computer)
@@ -78,21 +78,19 @@ $ node newQR
 
 Now your web browser should open and display something like this:
 
-https://github.com/Duke67/xrptoolkit-nodejs/newQR_pix.jpg
+(https://github.com/Duke67/xrptoolkit-nodejs/newQR_pix.jpg)
 
 
 # Installation (Offline computer)
-
-    • Make a fresh Linux installation (Ubuntu 16+ or similar)
-    • Copy here complete “xrptoolkit-nodejs” folder including its subfolders from the online computer
-    • Never connect this computer to the Internet (i.e. disable WiFi in BIOS, or switch network button off)
+- Make a fresh Linux installation (Ubuntu 16+ or similar)
+- Copy here complete “xrptoolkit-nodejs” folder including its subfolders from the online computer
+- Never connect this computer to the Internet (i.e. disable WiFi in BIOS, or switch network button off)
 
 
 # Configurations
-
-    • Linux (online) – Linux (offline)
-    • Android (online) – Linux (offline)
-    • Linux (online)
+- Linux (online) – Linux (offline)
+- Android (online) – Linux (offline)
+- Linux (online)
 
 
 # Usage
@@ -101,68 +99,69 @@ Create New Account
 ```
 $ node new
 ```
-    • You will see Ripple Account and Secret in console (terminal)
-    • Save to a secure location for future use
-    • Hint: Do some work before this, to give the OS a chance to collect some entropy. Never create accounts immediately after the system boots up!
+- You will see Ripple Account and Secret in console (terminal)
+- Save to a secure location for future use
+- Hint: Do some work before this, to give the OS a chance to collect some entropy. Never create accounts immediately after the system boots up!
       
 
 Create New Account (QR code)
 ```
 $ node newQR
 ```
-    • You will see Ripple Account and Secret in web browser
-    • Save text and QRcode images to a secure location for future use
-    • Hint: Do some work before this, to give the OS a chance to collect some entropy. Never create accounts immediately after the system boots up!
+- You will see Ripple Account and Secret in web browser
+- Save text and QRcode images to a secure location for future use
+- Hint: Do some work before this, to give the OS a chance to collect some entropy. Never create accounts immediately after the system boots up!
       
 
 Check Account Information
 ```
 $ node account_info [RCL|TEST] account
 ```
-    • Use RCL or TEST parameter to select production or test network
-    • You will see account’s Balance (in XRP, not drops) and Sequence in console
+- Use RCL or TEST parameter to select production or test network
+- You will see account’s Balance (in XRP, not drops) and Sequence in console
 
+```
 $ node account_info RCL rAAAAAAAAAAAAAAAAAAAAAAACNT 
 Balance : 22500
 Sequence: 7
-
+```
 
 Check Server Information
 ```
 $ node server_info [RCL|TEST]
 ```
-    • Use RCL or TEST parameter to select production or test network
-    • You will see a complex JSON-formatted server information
-    • Hint: parameter "ledgerVersion" in section "validatedLedger" is used when signing offline transactions
+- Use RCL or TEST parameter to select production or test network
+- You will see a complex JSON-formatted server information
+- Hint: parameter "ledgerVersion" in section "validatedLedger" is used when signing offline transactions
       
 
 Check Stash
 ```
 $ node check_stash
 ```
-    • Use text editor to preset array of variables with your accounts list
-    • You will see accounts complete balances, including non-XRP assets
+- Use text editor to preset array of variables with your accounts list
+- You will see accounts complete balances, including non-XRP assets
       
 
 Sign Payment
 ```
 $ node sign SRC SECRET SEQ DST DSTTAG AMOUNT MAXLEDGER
 ```
-    • Before signing payment offline, you will need to know:
-        ◦ source account
-        ◦ source account’s secret
-        ◦ source sequence (use Android client, or account_info)
-        ◦ destination address
-        ◦ destination tag (can be ignored, if not required by receipient)
-        ◦ maximum ledger (use Android client, or server_info and adjust accordingly)
-    • Payment amount is in drops (1,000,000 drops = 1 XRP)
+- Before signing payment offline, you will need to know:
+ - source account
+ - source account’s secret
+ - source sequence (use Android client, or account_info)
+ - destination address
+ - destination tag (can be ignored, if not required by receipient)
+ - maximum ledger (use Android client, or server_info and adjust accordingly)- 
+- Payment amount is in drops (1,000,000 drops = 1 XRP)
       
-    • Hint 1: Use text editor to preset default variables with your own data
-    • Hint 2: You may want to create custom copies of this script for frequent payments
-    • Hint 3: New ledger is closed every 3-4 seconds. If you will need 1-2 minutes to submit this payment to live network, better add 20-50 or even more to what is reported by server_info.
+- Hint 1: Use text editor to preset default variables with your own data
+- Hint 2: You may want to create custom copies of this script for frequent payments
+- Hint 3: New ledger is closed every 3-4 seconds. If you will need 1-2 minutes to submit this payment to live network, better add 20-50 or even more to what is reported by server_info.
 
-    • You will see JSON-formatted payment details and then signed transaction’s text blob
-    • Transfer signed transaction to online device (computer or Android client) for submission to Ripple network
+- You will see JSON-formatted payment details and then signed transaction’s text blob
+- Transfer signed transaction to online device (computer or Android client) for submission to Ripple network
 
 ```   
 $node sign 
@@ -180,37 +179,36 @@ Sign Payment (QR code)
 ```
 $ node signQR SRC SECRET SEQ DST DSTTAG AMOUNT MAXLEDGER
 ```
-    • Before signing payment offline, you will need to know:
-        ◦ source account
-        ◦ source account’s secret
-        ◦ source sequence (use Android client, or account_info)
-        ◦ destination address
-        ◦ destination tag (can be ignored, if not required by receipient)
-        ◦ maximum ledger (use Android client, or server_info and adjust accordingly)
-    • Payment amount is in drops (1,000,000 drops = 1 XRP)
+- Before signing payment offline, you will need to know:
+ - source account
+ - source account’s secret
+ - source sequence (use Android client, or account_info)
+ - destination address
+ - destination tag (can be ignored, if not required by receipient)
+ - maximum ledger (use Android client, or server_info and adjust accordingly)
+- Payment amount is in drops (1,000,000 drops = 1 XRP)
       
-    • Hint 1: Use text editor to preset default variables with your own data
-    • Hint 2: You may want to create custom copies of this script for frequent payments
-    • Hint 3: New ledger is closed every 3-4 seconds. If you will need 1-2 minutes to submit this payment to live network, better add 20-50 or even more to what is reported by server_info.
+- Hint 1: Use text editor to preset default variables with your own data
+- Hint 2: You may want to create custom copies of this script for frequent payments
+- Hint 3: New ledger is closed every 3-4 seconds. If you will need 1-2 minutes to submit this payment to live network, better add 20-50 or even more to what is reported by server_info.
 
-    • In a web browser you will see QR code and text blob representing signed transaction
-    • Use Android client QR feature to scan and instant submission to Ripple network
+- In a web browser you will see QR code and text blob representing signed transaction
+- Use Android client QR feature to scan and instant submission to Ripple network
 
 
 Submit
 ```
 $ node submit [RCL|TEST] SIGNED_TX
 ```
-    • Use RCL or TEST parameter to select production or test network
-    • Use sign or signQR to generate SIGNED_TX blob
-    • You will see a preliminary information about submission
-    • Final information after validation by network can be achieved by monitoring the account or the transation
+- Use RCL or TEST parameter to select production or test network
+- Use sign or signQR to generate SIGNED_TX blob
+- You will see a preliminary information about submission
+- Final information after validation by network can be achieved by monitoring the account or the transation
 
 
 # Contact
-    • Follow @MrDuke67 on twitter
-      
+- Follow [@MrDuke67 on twitter] (https://twitter.com/MrDuke67)
 
 # License
-    • https://github.com/Duke67/xrptoolkit-nodejs/LICENSE
+- (https://github.com/Duke67/xrptoolkit-nodejs/LICENSE)
       
