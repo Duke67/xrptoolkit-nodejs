@@ -6,7 +6,6 @@ If used properly, these tools allow you to actively use your XRP assets, while k
 
 
 # Features
-
     • Follows and levereges Ripple’s Reliable Transaction Submission
     • Allows you to keep sensitive info (Ripple Secret) always offline and thus secure
     • Maintains the air-gap between online and offline devices
@@ -14,10 +13,9 @@ If used properly, these tools allow you to actively use your XRP assets, while k
     • QR codes and OCR makes data transfers quick and convenient
     • Avoids using USB devices
     • Clean and compact code allows inspection by end-user, 3rd party or community
-  
-  
-# Functionality
 
+
+# Functionality
     • Access to XRP ledger from:
         ◦ Node.js (Linux, MacOS, Windows)
         ◦ Android client (xrptoolkit-android)
@@ -26,20 +24,21 @@ If used properly, these tools allow you to actively use your XRP assets, while k
     • Securely create new accounts (offline)
     • Securely sign payments (offline)
     • Submit offline-signed transactions to XRP ledger
-    
-# Roadmap
 
+
+# Roadmap
     • Support for other crypto currencies, fiat and IOUs
     • Escrow
     • Multi-sign
     • iOS client for Apple iPhone
 
-# Getting started
 
+# Getting started
     • Ripple Developer Center [https://ripple.com/build/] (https://ripple.com/build/)
     • Ripple API Beginners Guide [https://ripple.com/build/rippleapi-beginners-guide/] (https://ripple.com/build/rippleapi-beginners-guide/)
     • Reliable Transaction Submission [https://ripple.com/build/reliable-transaction-submission/] (https://ripple.com/build/reliable-transaction-submission/)
-    
+
+
 # Installation (Online computer)
 
 Install Dependencies
@@ -73,7 +72,9 @@ user@host:~/xrptoolkit-nodejs$
 
 Now test the QR version of the script to check if internal web server and QR code generation works:
 
+```
 $ node newQR
+```
 
 Now your web browser should open and display something like this:
 
@@ -97,27 +98,27 @@ https://github.com/Duke67/xrptoolkit-nodejs/newQR_pix.jpg
 # Usage
 
 Create New Account
-
+```
 $ node new
-
+```
     • You will see Ripple Account and Secret in console (terminal)
     • Save to a secure location for future use
     • Hint: Do some work before this, to give the OS a chance to collect some entropy. Never create accounts immediately after the system boots up!
       
 
 Create New Account (QR code)
-
+```
 $ node newQR
-
+```
     • You will see Ripple Account and Secret in web browser
     • Save text and QRcode images to a secure location for future use
     • Hint: Do some work before this, to give the OS a chance to collect some entropy. Never create accounts immediately after the system boots up!
       
 
 Check Account Information
-
+```
 $ node account_info [RCL|TEST] account
-
+```
     • Use RCL or TEST parameter to select production or test network
     • You will see account’s Balance (in XRP, not drops) and Sequence in console
 
@@ -127,26 +128,26 @@ Sequence: 7
 
 
 Check Server Information
-
+```
 $ node server_info [RCL|TEST]
-
+```
     • Use RCL or TEST parameter to select production or test network
     • You will see a complex JSON-formatted server information
     • Hint: parameter "ledgerVersion" in section "validatedLedger" is used when signing offline transactions
       
 
 Check Stash
-
+```
 $ node check_stash
-
+```
     • Use text editor to preset array of variables with your accounts list
     • You will see accounts complete balances, including non-XRP assets
       
 
 Sign Payment
-
+```
 $ node sign SRC SECRET SEQ DST DSTTAG AMOUNT MAXLEDGER
-
+```
     • Before signing payment offline, you will need to know:
         ◦ source account
         ◦ source account’s secret
@@ -162,7 +163,8 @@ $ node sign SRC SECRET SEQ DST DSTTAG AMOUNT MAXLEDGER
 
     • You will see JSON-formatted payment details and then signed transaction’s text blob
     • Transfer signed transaction to online device (computer or Android client) for submission to Ripple network
-      
+
+```   
 $node sign 
 
 {"TransactionType":"Payment","Account":"raakAtsGGZGGs8xb8AxDEUyWj7UxNGHGb7","Destination":"rGNLJ5VLZWKt7RrQrbyUZjXa2mCCcEenpu","DestinationTag":"123","Amount":"1000000","Flags":2147483648,"LastLedgerSequence":35000000,"Fee":"12","Sequence":1}
@@ -172,12 +174,12 @@ SIGNED TX:
 120000228000000024000000012E0000007B201B02160EC06140000000000F424068400000000000000C7321022CC705F4FEE39CEFE883FE86853EF866EF26764AC31362AAD37E6573F8CFE9E0744730450221009DD94CDA9A1D53083FF2C7EC8AFD7B67F932F4A70700427F011D537E8F9038A9022060160B51489138529EE4F5ABED739CC49F3AB60AA6E5B8F1F66FE79C88282CA1811437EF64A707F99867C5E2B8DB5E902D9CD04158D28314A70F68DD4D41D95468A8E61BC32DE25862F63CA
 
 $
-
+```
 
 Sign Payment (QR code)
-
+```
 $ node signQR SRC SECRET SEQ DST DSTTAG AMOUNT MAXLEDGER
-
+```
     • Before signing payment offline, you will need to know:
         ◦ source account
         ◦ source account’s secret
@@ -196,9 +198,9 @@ $ node signQR SRC SECRET SEQ DST DSTTAG AMOUNT MAXLEDGER
 
 
 Submit
-
+```
 $ node submit [RCL|TEST] SIGNED_TX
-
+```
     • Use RCL or TEST parameter to select production or test network
     • Use sign or signQR to generate SIGNED_TX blob
     • You will see a preliminary information about submission
@@ -206,11 +208,9 @@ $ node submit [RCL|TEST] SIGNED_TX
 
 
 # Contact
-
     • Follow @MrDuke67 on twitter
       
 
 # License
-
     • https://github.com/Duke67/xrptoolkit-nodejs/LICENSE
       
