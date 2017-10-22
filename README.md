@@ -34,9 +34,9 @@ If used properly, these tools allow you to actively use your XRP assets, while k
 
 
 # Getting started
-- [Ripple Developer Center] (https://ripple.com/build/)
-- [Ripple API Beginners Guide] (https://ripple.com/build/rippleapi-beginners-guide/)
-- [Reliable Transaction Submission] (https://ripple.com/build/reliable-transaction-submission/)
+- [Ripple Developer Center](https://ripple.com/build/)
+- [Ripple API Beginners Guide](https://ripple.com/build/rippleapi-beginners-guide/)
+- [Reliable Transaction Submission](https://ripple.com/build/reliable-transaction-submission/)
 
 
 # Installation (Online computer)
@@ -148,12 +148,12 @@ Sign Payment
 $ node sign SRC SECRET SEQ DST DSTTAG AMOUNT MAXLEDGER
 ```
 - Before signing payment offline, you will need to know:
- - source account
- - source account’s secret
- - source sequence (use Android client, or account_info)
- - destination address
- - destination tag (can be ignored, if not required by receipient)
- - maximum ledger (use Android client, or server_info and adjust accordingly)- 
+  - source account
+  - source account’s secret
+  - source sequence (use Android client, or account_info)
+  - destination address
+  - destination tag (can be ignored, if not required by receipient)
+  - maximum ledger (use Android client, or server_info and adjust accordingly)- 
 - Payment amount is in drops (1,000,000 drops = 1 XRP)
       
 - Hint 1: Use text editor to preset default variables with your own data
@@ -166,11 +166,18 @@ $ node sign SRC SECRET SEQ DST DSTTAG AMOUNT MAXLEDGER
 ```   
 $node sign 
 
-{"TransactionType":"Payment","Account":"raakAtsGGZGGs8xb8AxDEUyWj7UxNGHGb7","Destination":"rGNLJ5VLZWKt7RrQrbyUZjXa2mCCcEenpu","DestinationTag":"123","Amount":"1000000","Flags":2147483648,"LastLedgerSequence":35000000,"Fee":"12","Sequence":1}
+{"TransactionType":"Payment","Account":"raakAtsGGZGGs8xb8AxDEUyWj7UxNGHGb7",
+"Destination":"rGNLJ5VLZWKt7RrQrbyUZjXa2mCCcEenpu","DestinationTag":"123",
+"Amount":"1000000","Flags":2147483648,"LastLedgerSequence":35000000,
+"Fee":"12","Sequence":1}
 
 SIGNED TX:
 
-120000228000000024000000012E0000007B201B02160EC06140000000000F424068400000000000000C7321022CC705F4FEE39CEFE883FE86853EF866EF26764AC31362AAD37E6573F8CFE9E0744730450221009DD94CDA9A1D53083FF2C7EC8AFD7B67F932F4A70700427F011D537E8F9038A9022060160B51489138529EE4F5ABED739CC49F3AB60AA6E5B8F1F66FE79C88282CA1811437EF64A707F99867C5E2B8DB5E902D9CD04158D28314A70F68DD4D41D95468A8E61BC32DE25862F63CA
+120000228000000024000000012E0000007B201B02160EC06140000000000F424068400000000000000C7321022C
+C705F4FEE39CEFE883FE86853EF866EF26764AC31362AAD37E6573F8CFE9E0744730450221009DD94CDA9A1D5308
+3FF2C7EC8AFD7B67F932F4A70700427F011D537E8F9038A9022060160B51489138529EE4F5ABED739CC49F3AB60A
+A6E5B8F1F66FE79C88282CA1811437EF64A707F99867C5E2B8DB5E902D9CD04158D28314A70F68DD4D41D95468A8
+E61BC32DE25862F63CA
 
 $
 ```
@@ -180,12 +187,12 @@ Sign Payment (QR code)
 $ node signQR SRC SECRET SEQ DST DSTTAG AMOUNT MAXLEDGER
 ```
 - Before signing payment offline, you will need to know:
- - source account
- - source account’s secret
- - source sequence (use Android client, or account_info)
- - destination address
- - destination tag (can be ignored, if not required by receipient)
- - maximum ledger (use Android client, or server_info and adjust accordingly)
+  - source account
+  - source account’s secret
+  - source sequence (use Android client, or account_info)
+  - destination address
+  - destination tag (can be ignored, if not required by receipient)
+  - maximum ledger (use Android client, or server_info and adjust accordingly)
 - Payment amount is in drops (1,000,000 drops = 1 XRP)
       
 - Hint 1: Use text editor to preset default variables with your own data
@@ -207,8 +214,7 @@ $ node submit [RCL|TEST] SIGNED_TX
 
 
 # Contact
-- Follow [@MrDuke67 on twitter] (https://twitter.com/MrDuke67)
+- Follow [@MrDuke67 on twitter](https://twitter.com/MrDuke67)
 
 # License
 - (https://github.com/Duke67/xrptoolkit-nodejs/LICENSE)
-      
