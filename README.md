@@ -78,7 +78,7 @@ $ node newQR
 
 Now your web browser should open and display something like this:
 
-(https://github.com/Duke67/xrptoolkit-nodejs/newQR_pix.jpg)
+(https://github.com/Duke67/xrptoolkit-nodejs/blob/master/newQR_pix.jpg)
 
 
 # Installation (Offline computer)
@@ -217,4 +217,4 @@ $ node submit [RCL|TEST] SIGNED_TX
 - Follow [@MrDuke67 on twitter](https://twitter.com/MrDuke67)
 
 # License
-- (https://github.com/Duke67/xrptoolkit-nodejs/LICENSE)
+- (https://github.com/Duke67/xrptoolkit-nodejs/blob/master/LICENSE)
