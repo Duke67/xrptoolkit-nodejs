@@ -26,13 +26,6 @@ If used properly, these tools allow you to actively use your XRP assets, while k
 - Submit offline-signed transactions to XRP ledger
 
 
-# Roadmap
-- Support for other crypto currencies, fiat and IOUs
-- Escrow
-- Multi-sign
-- iOS client for Apple iPhone
-
-
 # Getting started
 - [Ripple Developer Center](https://ripple.com/build/)
 - [Ripple API Beginners Guide](https://ripple.com/build/rippleapi-beginners-guide/)
@@ -95,7 +88,8 @@ Now your web browser should open and display something like this:
 
 # Usage
 
-Create New Account
+
+###Create New Account
 ```
 $ node new
 ```
@@ -104,7 +98,8 @@ $ node new
 - Hint: Do some work before this, to give the OS a chance to collect some entropy. Never create accounts immediately after the system boots up!
       
 
-Create New Account (QR code)
+
+###Create New Account (QR code)
 ```
 $ node newQR
 ```
@@ -113,7 +108,8 @@ $ node newQR
 - Hint: Do some work before this, to give the OS a chance to collect some entropy. Never create accounts immediately after the system boots up!
       
 
-Check Account Information
+
+###Check Account Information
 ```
 $ node account_info [RCL|TEST] account
 ```
@@ -126,24 +122,25 @@ Balance : 22500
 Sequence: 7
 ```
 
-Check Server Information
+
+###Check Server Information
 ```
 $ node server_info [RCL|TEST]
 ```
 - Use RCL or TEST parameter to select production or test network
 - You will see a complex JSON-formatted server information
 - Hint: parameter "ledgerVersion" in section "validatedLedger" is used when signing offline transactions
-      
+   
 
-Check Stash
+###Check Stash
 ```
 $ node check_stash
 ```
 - Use text editor to preset array of variables with your accounts list
 - You will see accounts complete balances, including non-XRP assets
-      
 
-Sign Payment
+
+###Sign Payment
 ```
 $ node sign SRC SECRET SEQ DST DSTTAG AMOUNT MAXLEDGER
 ```
@@ -156,9 +153,10 @@ $ node sign SRC SECRET SEQ DST DSTTAG AMOUNT MAXLEDGER
   - maximum ledger (use Android client, or server_info and adjust accordingly)- 
 - Payment amount is in drops (1,000,000 drops = 1 XRP)
       
-- Hint 1: Use text editor to preset default variables with your own data
-- Hint 2: You may want to create custom copies of this script for frequent payments
-- Hint 3: New ledger is closed every 3-4 seconds. If you will need 1-2 minutes to submit this payment to live network, better add 20-50 or even more to what is reported by server_info.
+- Hints:
+  - Use text editor to preset default variables with your own data
+  - You may want to create custom copies of this script for frequent payments
+  - New ledger is closed every 3-4 seconds. If you will need 1-2 minutes to submit this payment to live network, better add 20-50 or even more to what is reported by server_info.
 
 - You will see JSON-formatted payment details and then signed transaction’s text blob
 - Transfer signed transaction to online device (computer or Android client) for submission to Ripple network
@@ -182,7 +180,8 @@ E61BC32DE25862F63CA
 $
 ```
 
-Sign Payment (QR code)
+
+###Sign Payment (QR code)
 ```
 $ node signQR SRC SECRET SEQ DST DSTTAG AMOUNT MAXLEDGER
 ```
@@ -195,15 +194,16 @@ $ node signQR SRC SECRET SEQ DST DSTTAG AMOUNT MAXLEDGER
   - maximum ledger (use Android client, or server_info and adjust accordingly)
 - Payment amount is in drops (1,000,000 drops = 1 XRP)
       
-- Hint 1: Use text editor to preset default variables with your own data
-- Hint 2: You may want to create custom copies of this script for frequent payments
-- Hint 3: New ledger is closed every 3-4 seconds. If you will need 1-2 minutes to submit this payment to live network, better add 20-50 or even more to what is reported by server_info.
+- Hints:
+  - Use text editor to preset default variables with your own data
+  - You may want to create custom copies of this script for frequent payments
+  - New ledger is closed every 3-4 seconds. If you will need 1-2 minutes to submit this payment to live network, better add 20-50 or even more to what is reported by server_info.
 
 - In a web browser you will see QR code and text blob representing signed transaction
 - Use Android client QR feature to scan and instant submission to Ripple network
 
 
-Submit
+###Submit
 ```
 $ node submit [RCL|TEST] SIGNED_TX
 ```
@@ -213,8 +213,16 @@ $ node submit [RCL|TEST] SIGNED_TX
 - Final information after validation by network can be achieved by monitoring the account or the transation
 
 
+# Future development
+- Support for other crypto currencies, fiat and IOUs
+- Escrow
+- Multi-sign
+- iOS client for Apple iPhone
+
+
 # Contact
 - Follow [@MrDuke67 on twitter](https://twitter.com/MrDuke67)
+
 
 # License
 - (https://github.com/Duke67/xrptoolkit-nodejs/blob/master/LICENSE)
