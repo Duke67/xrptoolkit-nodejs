@@ -26,24 +26,13 @@ var dst = 'rGNLJ5VLZWKt7RrQrbyUZjXa2mCCcEenpu';		// destination account
 var tag = '123';					// destination tag 
 var scrt = 'shkJ3HM8jcrKvpYAifJhwvkaGDEtm';		// source account's secret 
 
-var amnt = '1000000';					// payment amount in XRP drops (1,000,000 drops = 1 XRP)
+var amnt = 1000000;					// payment amount in XRP drops (1,000,000 drops = 1 XRP)
 var ccy = 'XRP';					// currency (only XRP is supported for now)
 var lgr = 35000000;					// maximum ledger
 var seq = 1;						// source account's sequence (to get this info, use XRPtoolkit-Android or account_info.js)   
 var fee = 12;						// fee (default is 12 drops, can be increased)
 
 ///
-
-var rawTx = '{"TransactionType":"Payment","Account":"' + src +
-'","Destination":"' + dst +
-'","DestinationTag":"' + tag +
-'","Amount":"' + amnt +
-'","Flags":2147483648,' + 
-'"LastLedgerSequence":' + lgr +
-',"Fee":"' + fee +
-'","Sequence":' + seq + '}';
-
-///////////////////////////////////////////////////////////
 
 process.argv.forEach(function (val, index, array) {
 
@@ -61,6 +50,17 @@ process.argv.forEach(function (val, index, array) {
 	}
 
 });
+
+///////////////////////////////////////////////////////////
+
+var rawTx = '{"TransactionType":"Payment","Account":"' + src +
+'","Destination":"' + dst +
+'","DestinationTag":"' + tag +
+'","Amount":"' + amnt +
+'","Flags":2147483648,' + 
+'"LastLedgerSequence":' + lgr +
+',"Fee":"' + fee +
+'","Sequence":' + seq + '}';
 
 ///////////////////////////////////////////////////////////
 
