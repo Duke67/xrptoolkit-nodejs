@@ -27,6 +27,7 @@ If used properly, these tools allow you to actively use your XRP assets, while k
 
 
 # Getting started
+First try to familiarize yourself with how Ripple network works:
 - [Ripple Developer Center](https://ripple.com/build/)
 - [Ripple API Beginners Guide](https://ripple.com/build/rippleapi-beginners-guide/)
 - [Reliable Transaction Submission](https://ripple.com/build/reliable-transaction-submission/)
@@ -162,20 +163,19 @@ $ node sign SRC SECRET SEQ DST DSTTAG AMOUNT MAXLEDGER
 - Transfer signed transaction to online device (computer or Android client) for submission to Ripple network
 
 ```   
-$node sign 
+$ node sign raakAtsGGZGGs8xb8AxDEUyWj7UxNGHGb7 shkJ3HM8jcrKvpYAifJhwvkaGDEtm 16 
+rGNLJ5VLZWKt7RrQrbyUZjXa2mCCcEenpu 1967 25000000 35000000 
 
 {"TransactionType":"Payment","Account":"raakAtsGGZGGs8xb8AxDEUyWj7UxNGHGb7",
-"Destination":"rGNLJ5VLZWKt7RrQrbyUZjXa2mCCcEenpu","DestinationTag":"123",
-"Amount":"1000000","Flags":2147483648,"LastLedgerSequence":35000000,
-"Fee":"12","Sequence":1}
+"Destination":"rGNLJ5VLZWKt7RrQrbyUZjXa2mCCcEenpu","DestinationTag":"1967","Amount":"25000000",
+"Flags":2147483648,"LastLedgerSequence":35000000,"Fee":"12","Sequence":16}
 
 SIGNED TX:
 
-120000228000000024000000012E0000007B201B02160EC06140000000000F424068400000000000000C7321022C
-C705F4FEE39CEFE883FE86853EF866EF26764AC31362AAD37E6573F8CFE9E0744730450221009DD94CDA9A1D5308
-3FF2C7EC8AFD7B67F932F4A70700427F011D537E8F9038A9022060160B51489138529EE4F5ABED739CC49F3AB60A
-A6E5B8F1F66FE79C88282CA1811437EF64A707F99867C5E2B8DB5E902D9CD04158D28314A70F68DD4D41D95468A8
-E61BC32DE25862F63CA
+120000228000000024000000102E000007AF201B02160EC06140000000017D784068400000000000000C7321022CC705F
+4FEE39CEFE883FE86853EF866EF26764AC31362AAD37E6573F8CFE9E074473045022100D2D6A554D11E55290F216A8FB9
+CC2921A498DC4FF357D480589F72550810A7CC02202BBB48C1342631BA514A307AF523C77CBD4406D19CEC69F0508187A
+7BD7265F7811437EF64A707F99867C5E2B8DB5E902D9CD04158D28314A70F68DD4D41D95468A8E61BC32DE25862F63CA6
 
 $
 ```
@@ -200,7 +200,7 @@ $ node signQR SRC SECRET SEQ DST DSTTAG AMOUNT MAXLEDGER
   - New ledger is closed every 3-4 seconds. If you will need 1-2 minutes to submit this payment to live network, better add 20-50 or even more to what is reported by server_info.
 
 - In a web browser you will see QR code and text blob representing signed transaction
-- Use Android client QR feature to scan and instant submission to Ripple network
+- Use Android client QR feature to scan and instantly submit transaction to Ripple network
 
 
 ### Submit
@@ -208,10 +208,9 @@ $ node signQR SRC SECRET SEQ DST DSTTAG AMOUNT MAXLEDGER
 $ node submit [RCL|TEST] SIGNED_TX
 ```
 - Use RCL or TEST parameter to select production or test network
-- Use sign or signQR to generate SIGNED_TX blob
-- You will see a preliminary information about submission
-- Final information after validation by network can be achieved by monitoring the account or the transation
-
+- Use sign or signQR to generate SIGNED_TX text blob
+- After a submission you will see a preliminary information on status 
+- Final information about validation by the network can be obtained by monitoring the account or the transation
 
 # Future development
 - Support for other crypto currencies, fiat and IOUs
