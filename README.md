@@ -89,7 +89,7 @@ Now your web browser should open and display something like this:
 # Usage
 
 
-###Create New Account
+### Create New Account
 ```
 $ node new
 ```
@@ -99,7 +99,7 @@ $ node new
       
 
 
-###Create New Account (QR code)
+### Create New Account (QR code)
 ```
 $ node newQR
 ```
@@ -109,7 +109,7 @@ $ node newQR
       
 
 
-###Check Account Information
+### Check Account Information
 ```
 $ node account_info [RCL|TEST] account
 ```
@@ -123,7 +123,7 @@ Sequence: 7
 ```
 
 
-###Check Server Information
+### Check Server Information
 ```
 $ node server_info [RCL|TEST]
 ```
@@ -132,7 +132,7 @@ $ node server_info [RCL|TEST]
 - Hint: parameter "ledgerVersion" in section "validatedLedger" is used when signing offline transactions
    
 
-###Check Stash
+### Check Stash
 ```
 $ node check_stash
 ```
@@ -140,7 +140,7 @@ $ node check_stash
 - You will see accounts complete balances, including non-XRP assets
 
 
-###Sign Payment
+### Sign Payment
 ```
 $ node sign SRC SECRET SEQ DST DSTTAG AMOUNT MAXLEDGER
 ```
@@ -181,7 +181,7 @@ $
 ```
 
 
-###Sign Payment (QR code)
+### Sign Payment (QR code)
 ```
 $ node signQR SRC SECRET SEQ DST DSTTAG AMOUNT MAXLEDGER
 ```
@@ -203,7 +203,7 @@ $ node signQR SRC SECRET SEQ DST DSTTAG AMOUNT MAXLEDGER
 - Use Android client QR feature to scan and instant submission to Ripple network
 
 
-###Submit
+### Submit
 ```
 $ node submit [RCL|TEST] SIGNED_TX
 ```
