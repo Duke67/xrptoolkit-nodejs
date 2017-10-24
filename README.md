@@ -20,10 +20,11 @@ If used properly, these tools allow you to actively use your XRP assets, while k
   - Node.js (Linux, MacOS, Windows)
   - Android client (xrptoolkit-android)
   - iOS client (xrptoolkit-ios - planned)
-- Monitor XRP ledger (ledger, accounts, balances, etc.)
-- Securely create new accounts (offline)
-- Securely sign payments (offline)
-- Submit offline-signed transactions to XRP ledger
+- Monitors XRP ledger (ledger, accounts, balances, etc.)
+- Securely creates new accounts (offline)
+- Securely signs payments (offline)
+- Submits offline-signed transactions to XRP ledger
+- Extracts Ripple address (public) from Ripple secret (private)
 
 
 # Getting started
@@ -211,6 +212,23 @@ $ node submit [RCL|TEST] SIGNED_TX
 - Use sign or signQR to generate SIGNED_TX text blob
 - After a submission you will see a preliminary information on status 
 - Final information about validation by the network can be obtained by monitoring the account or the transation
+
+### Secret2address
+```
+$ node secret2address [SECRET]
+```
+- Extracts Ripple address (public) from Ripple secret (private)
+- If no secret is provided, it creates a new address
+
+
+### Secret2addressQR
+```
+$ node secret2addressQR [SECRET]
+```
+- Extracts Ripple address (public) from Ripple secret (private)
+- Displays all data including QR codes in a web browser 
+- If no secret is provided, it creates a new address
+
 
 # Future development
 - Support for other crypto currencies, fiat and IOUs
