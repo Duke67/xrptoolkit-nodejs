@@ -4,8 +4,8 @@
 // (C) 2017 Duke67 (MrDuke67@outlook.com)
 // https://github.com/Duke67/xrptoolkit-nodejs
 //
-// showQR.js - shows Ripple address as a QR code
-// syntax: node showQR [ACCOUNT]
+// showQR.js - generate a QR code for provided text 
+// syntax: node showQR [TEXT]
 //
 ///////////////////////////////////////////////////////////
 
@@ -15,13 +15,13 @@ var express = require('express');
 var qrcode = require('qrcode');
 var open = require('open');
 
-var acnt = "raakAtsGGZGGs8xb8AxDEUyWj7UxNGHGb7";	// use your own data here
+var txt = "USE_A_REAL_TEXT_STRING";
 
 if(process.argv.length > 2) {
-	acnt = process.argv[2];
+	txt = process.argv[2];
 }
 
-console.log('Ripple Account : ' + acnt);
+console.log('Source Text : ' + txt);
 
 ///////////////////////////////////////////////////////////
 
@@ -37,7 +37,7 @@ app.get('/', function(req, res) {
 	html += "<style type='text/css'>div{ padding:10px; }.inline { float:left; }.clearBoth { clear:both; }</style>";
 
 	html += "<div>XRPtoolkit by Duke67</div>";
-	html += "<div>Ripple Account's QR code</div>";
+	html += "<div>QR code generator</div>";
 
 	var opts = {
 	  errorCorrectionLevel: 'H',
@@ -45,13 +45,13 @@ app.get('/', function(req, res) {
 		scale: 10
 	};
 
-	// generate QR code of Ripple Address (public)
-	qrcode.toDataURL(acnt, opts, function (err, url1) {
+	// generate QR code of a text string
+	qrcode.toDataURL(txt, opts, function (err, url1) {
 
 		// display it in the web browser
 		html += "<div class='inline'>";
-		html += "Ripple Account: <br /><br />";
-		html += acnt + "<br />";
+		html += "Source Text : ";
+		html += txt + "<br />";
 		html += "<img src='" + url1 + "'/> <br />";
 		html += "</div>";
 
