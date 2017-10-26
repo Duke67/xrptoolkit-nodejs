@@ -6,7 +6,7 @@ If used properly, these tools allow you to actively use your XRP assets, while k
 
 
 # Features
-- Follows and levereges Ripple’s Reliable Transaction Submission
+- Follows and leverages Ripple’s Reliable Transaction Submission
 - Allows you to keep sensitive info (Ripple Secret) always offline and thus secure
 - Maintains the air-gap between online and offline devices
 - Connected device can only see encrypted data
@@ -25,6 +25,7 @@ If used properly, these tools allow you to actively use your XRP assets, while k
 - Securely signs payments (offline)
 - Submits offline-signed transactions to XRP ledger
 - Extracts Ripple address (public) from Ripple secret (private)
+- Shows Ripple address as a QR code
 
 
 # Getting started
@@ -228,6 +229,14 @@ $ node secret2addressQR [SECRET]
 - Extracts Ripple address (public) from Ripple secret (private)
 - Displays all data including QR codes in a web browser 
 - If no secret is provided, it creates a new address
+
+
+### ShowQR
+```
+$ node showQR [ACCOUNT|SECRET]
+```
+- Generates a QR code for a text provided
+- Display it in a web browser 
 
 
 # Future development
