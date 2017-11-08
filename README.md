@@ -49,7 +49,7 @@ Install ripple-lib and other dependencies using npm:
 $ npm install ripple-lib
 $ npm install express
 $ npm install qrcode
-$ npm install open
+$ npm install launch-browser
 ```
 Test your installation:
 
@@ -245,6 +245,9 @@ $ node showQR [ACCOUNT|SECRET]
 - Multi-sign
 - iOS client for Apple iPhone
 
+# Release notes
+- 1.0.0 - initial release
+- 1.0.1 - improved web browser launching (QR scripts versions)
 
 # Contact
 - Follow [@MrDuke67 on twitter](https://twitter.com/MrDuke67)
