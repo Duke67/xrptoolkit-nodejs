@@ -15,7 +15,7 @@ const RippleAPI = require('ripple-lib').RippleAPI;
 
 var express = require('express');
 var qrcode = require('qrcode');
-var open = require('open');
+var launcher = require('launch-browser');
 
 var api = new RippleAPI();
 
@@ -98,6 +98,9 @@ console.log('Press Ctrl+C to quit this script.');
 
 app.listen(3000);
 
-open('http://localhost:3000/');
+launcher('http://localhost:3000/', { browser: ['chrome', 'firefox', 'safari'] }, function(e, browser){
+	if(e) return console.log(e);
+});
 
 ///////////////////////////////////////////////////////////
+

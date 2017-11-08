@@ -16,7 +16,7 @@ const RippleAPI = require('ripple-lib').RippleAPI;
 
 var express = require('express');
 var qrcode = require('qrcode');
-var open = require('open');
+var launcher = require('launch-browser');
 
 var api = new RippleAPI();
 
@@ -86,6 +86,9 @@ app.get('/', function(req, res) {
 	console.log(signedTx.signedTransaction);
 	console.log();
 
+	//console.log('To see the QR code, point your web browser to http://localhost:3000/');
+	console.log('Press Ctrl+C to quit this script.');
+
 
 	var html = "<!DOCTYPE html/><html>";
 	html += "<head><title>XRPtoolkit by Duke67</title></head><body>";
@@ -153,10 +156,9 @@ app.get('/', function(req, res) {
 
 app.listen(3000);
 
-open('http://localhost:3000/');
-
-//console.log('To see the QR code, point your web browser to http://localhost:3000/');
-console.log('Press Ctrl+C to quit this script.');
+launcher('http://localhost:3000/', { browser: ['chrome', 'firefox', 'safari'] }, function(e, browser){
+	if(e) return console.log(e);
+});
 
 ///////////////////////////////////////////////////////////
 
