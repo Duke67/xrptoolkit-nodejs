@@ -52,7 +52,7 @@ babel-runtime@^5.8.20:
   dependencies:
     core-js "^1.0.0"
 
-babel-runtime@^6.6.1:
+babel-runtime@^6.26.0, babel-runtime@^6.6.1:
   version "6.26.0"
   resolved "https://registry.yarnpkg.com/babel-runtime/-/babel-runtime-6.26.0.tgz#965c7058668e82b55d7bfe04ff2337bc8b5647fe"
   dependencies:
@@ -377,6 +377,14 @@ https-proxy-agent@^1.0.0:
     debug "2"
     extend "3"
 
+iced-error@~0.0.6:
+  version "0.0.12"
+  resolved "https://registry.yarnpkg.com/iced-error/-/iced-error-0.0.12.tgz#e0a861462817cf0ce974b13fca612d3a0d5d10be"
+
+iced-runtime@>=0.0.1:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/iced-runtime/-/iced-runtime-1.0.3.tgz#2d4f4fb999ab7aa5430b193c77a7fce4118319ce"
+
 iconv-lite@0.4.19:
   version "0.4.19"
   resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.4.19.tgz#f7468f60135f5e5dad3399c0a81be9a1603a082b"
@@ -526,6 +534,12 @@ mkdirp@^0.5.0:
   dependencies:
     minimist "0.0.8"
 
+more-entropy@~0.0.2:
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/more-entropy/-/more-entropy-0.0.7.tgz#67bfc6f7a86f26fbc37aac83fd46d88c61d109b5"
+  dependencies:
+    iced-runtime ">=0.0.1"
+
 ms@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"
@@ -647,6 +661,14 @@ pngjs@^3.3.0:
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/pngjs/-/pngjs-3.3.1.tgz#8e14e6679ee7424b544334c3b2d21cea6d8c209a"
 
+progress@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/progress/-/progress-2.0.0.tgz#8a1be366bf8fc23db2bd23f10c6fe920b4389d1f"
+
+progress@~1.1.2:
+  version "1.1.8"
+  resolved "https://registry.yarnpkg.com/progress/-/progress-1.1.8.tgz#e260c78f6161cdd9b0e56cc3e0a85de17c7a57be"
+
 proxy-addr@~2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/proxy-addr/-/proxy-addr-2.0.2.tgz#6571504f47bb988ec8180253f85dd7e14952bdec"
@@ -751,7 +773,7 @@ ripple-hashes@^0.3.1:
     ripple-address-codec "^2.0.1"
     ripple-binary-codec "^0.1.0"
 
-ripple-keypairs@^0.10.1:
+ripple-keypairs@0.10.1, ripple-keypairs@^0.10.1:
   version "0.10.1"
   resolved "https://registry.yarnpkg.com/ripple-keypairs/-/ripple-keypairs-0.10.1.tgz#ef796b519bb202682515e7cdd6063762636943e6"
   dependencies:
@@ -785,6 +807,13 @@ ripple-lib@^0.18.1:
     ripple-keypairs "^0.10.1"
     ripple-lib-transactionparser "^0.6.2"
     ws "^3.3.1"
+
+ripplewarpwallet@../ripplewarpwallet/:
+  version "1.0.4"
+  dependencies:
+    babel-runtime "^6.26.0"
+    ripple-keypairs "0.10.1"
+    triplesec keybase/triplesec#header_v3
 
 safe-buffer@5.1.1, safe-buffer@^5.0.1, safe-buffer@~5.1.0:
   version "5.1.1"
@@ -914,6 +943,14 @@ strip-bom@^3.0.0:
 strip-eof@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/strip-eof/-/strip-eof-1.0.0.tgz#bb43ff5598a6eb05d89b59fcd129c983313606bf"
+
+triplesec@keybase/triplesec#header_v3:
+  version "1.3.0"
+  resolved "https://codeload.github.com/keybase/triplesec/tar.gz/cea95ec82c7412008ecee65a5fd782c44bc3bf51"
+  dependencies:
+    iced-error "~0.0.6"
+    more-entropy "~0.0.2"
+    progress "~1.1.2"
 
 type-is@~1.6.15:
   version "1.6.15"
