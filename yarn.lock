@@ -808,8 +808,9 @@ ripple-lib@^0.18.1:
     ripple-lib-transactionparser "^0.6.2"
     ws "^3.3.1"
 
-ripplewarpwallet@../ripplewarpwallet/:
+ripplewarpwallet@^1.0.4:
   version "1.0.4"
+  resolved "https://registry.yarnpkg.com/ripplewarpwallet/-/ripplewarpwallet-1.0.4.tgz#096acef291e81310ed1e9e121c314a42fc3e9273"
   dependencies:
     babel-runtime "^6.26.0"
     ripple-keypairs "0.10.1"
@@ -944,7 +945,7 @@ strip-eof@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/strip-eof/-/strip-eof-1.0.0.tgz#bb43ff5598a6eb05d89b59fcd129c983313606bf"
 
-triplesec@keybase/triplesec#header_v3:
+"triplesec@github:keybase/triplesec#header_v3":
   version "1.3.0"
   resolved "https://codeload.github.com/keybase/triplesec/tar.gz/cea95ec82c7412008ecee65a5fd782c44bc3bf51"
   dependencies:
