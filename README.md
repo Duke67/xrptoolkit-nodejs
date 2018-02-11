@@ -228,6 +228,18 @@ $ node secret2addressQR [SECRET]
 - Displays all data including QR codes in a web browser 
 - If no secret is provided, it creates a new address
 
+### Warp2account
+```
+$ node warp2account [PASSWORD] [SALT]
+```
+- Extracts Ripple address (public) and Ripple secret (private) from RippleWarpWallet Password and Salt
+
+### Warp2accountQR
+```
+$ node warp2accountQR [PASSWORD] [SALT]
+```
+- Extracts Ripple address (public) and Ripple secret (private) from RippleWarpWallet Password and Salt
+- Displays all data including QR codes in a web browser 
 
 ### ShowQR
 ```
