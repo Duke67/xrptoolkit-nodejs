@@ -39,18 +39,16 @@ First try to familiarize yourself with how Ripple network works:
 
 Install Dependencies
 
-Install Node.js, if you haven't already.
+Install Node.js, if you haven't already. In the following steps, either `yarn` or `npm` can be used, but `yarn` is preferred for the extra reliability.
 
-Fork and clone the xrptoolkit-nodejs repository and run npm install.
-
-Install ripple-lib and other dependencies using npm:
+Clone the xrptoolkit-nodejs repository and install dependencies
 
 ```
-$ npm install ripple-lib
-$ npm install express
-$ npm install qrcode
-$ npm install launch-browser
+$ git clone https://github.com/Duke67/xrptoolkit-nodejs xrptoolkit
+$ cd xrptoolkit
+$ yarn install
 ```
+
 Test your installation:
 
 ```
@@ -60,10 +58,10 @@ $ node new
 You should see something like this:
 
 ```
-user@host:~/xrptoolkit-nodejs$ node new
+user@host:~/xrptoolkit$ node new
 Ripple Account : ryH1ckEKUm4yeLTziToAltWYtsrYSV4Po
 Ripple Secret : ss467Gz1g5YikcCxHePFShkoZBPzr
-user@host:~/xrptoolkit-nodejs$ 
+user@host:~/xrptoolkit$ 
 ```
 
 Now test the QR version of the script to check if internal web server and QR code generation works:
