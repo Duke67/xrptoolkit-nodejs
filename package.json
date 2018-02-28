@@ -1,6 +1,6 @@
 {
   "name": "xrptoolkit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A toolkit for safe and secure access to the XRP ledger (Ripple Network)",
   "main": "new.js",
   "repository": "https://github.com/Duke67/xprtoolkit-nodejs",
@@ -12,6 +12,6 @@
     "progress": "^2.0.0",
     "qrcode": "^1.2.0",
     "ripple-lib": "^0.18.1",
-    "ripplewarpwallet": "^1.0.4"
+    "ripplewarpwallet": "^1.0.5"
   }
 }
