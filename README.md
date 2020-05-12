@@ -26,6 +26,7 @@ If used properly, these tools allow you to actively use your XRP assets, while k
 - Submits offline-signed transactions to XRP ledger
 - Extracts Ripple address (public) from Ripple secret (private)
 - Shows Ripple address as a QR code
+- NEW: AccountDelete
 
 
 # Getting started
