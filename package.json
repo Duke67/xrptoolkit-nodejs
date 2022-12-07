@@ -7,7 +7,7 @@
   "author": "Duke67",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.16.2",
+    "express": "^4.17.3",
     "launch-browser": "^1.0.0",
     "progress": "^2.0.0",
     "qrcode": "^1.2.0",
